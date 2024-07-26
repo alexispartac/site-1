@@ -45,17 +45,17 @@ body {
 }
 
 .menu-list {
-    height: inherit;
-    margin-top: 22px;
-    position: relative;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto ;
-    gap: 20px;
-    justify-content: space-around;
-    float: right;
-    right: 20px;
+    margin: 0px;
+    height: 25px;
     list-style: none;
-    padding-right: 1%;
+    color: var(--background);
+    display: flex;
+    flex-wrap: nowrap;
+    float: right;
+    gap: 25px;
+    margin-right: 175px;
+    text-align: center;
+    margin-top: 22px;
 }
 
 .tooltip-menu {
@@ -99,22 +99,27 @@ body {
 }
 
 .tooltip-text{
-    position: relative;
+    position: absolute;
     right: -25px;
     top: -16px;
-    width: 35px;
+    width: 37px;
     height: 16px;
     font-size: 10px;
-    background-color: rgb(181, 12, 12);
-    color: #fff;
     text-align: center;
-    padding: 5px 0;
     border-radius: 15px;
-    margin: 0;
+    margin: auto;
+    
     font-family: "Montserrat", sans-serif;
-    position: absolute;
+    background-color: #dc3545;;
     z-index: 1;
 }
+
+.tooltip-text p{
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    right: 8.7px;
+} 
 
 .menu-vertical{
     display: none;
@@ -136,7 +141,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
     .menu {
         background-color: white;
         border-bottom: 1px solid rgb(225, 224, 224);
@@ -277,16 +282,15 @@ body {
 }
 
 .content-in {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 500px 500px;
-    background-color: #f4f7fa;
-    margin: 80px;
+    display: flex;
+    width: 1001px;
+    margin: 70px auto;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .content-in > div {
-    width: 100%;
+    width: 48.5%;
     padding: 40px;
     background-color: white;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
@@ -299,22 +303,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     line-height: 1.7;
-}
-
-@media screen and ( max-width: 1100px) {
-    .content {
-        width: 100%;
-        background-color: #f4f7fa;
-    }
-
-    .content-in {
-        display: grid;
-        justify-content: center;
-        grid-template-columns: 40% 40%;
-        background-color: #f4f7fa;
-        margin: 80px;
-        gap: 30px;
-    }
 }
 
 .content-in img{
@@ -346,38 +334,49 @@ body {
     height: 8px;
 }
 
-@media screen and (max-width: 800px){
-    .content {
-       all: unset;    
-    }
-    
-    .content-in {
-        all: unset;
-    }
 
-    .content {
-        width: 100%;
-        background-color: #f4f7fa;
-        padding-top: 100px;
-        align-items: center;
-        margin: auto;
-    }
+@media screen and ( max-width: 1200px) {
 
     .content-in {
-        width: 70%;
-        align-items: center;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 25px;
-        margin-top: 30px;
-        margin-bottom: 100px;
+        width: 960px;
     }
-
     
+    .content-in > div {
+        width: 48.438%;
+    }
 }
 
+@media screen and ( max-width: 1000px) {
+    .content-in {
+        width: 800px;
+    }
+    
+    .content-in > div {
+        width: 48%;
+    }
+}
+
+@media screen and ( max-width: 840px) {
+    .content-in {
+        width: 600px;
+    }
+    
+    .content-in > div {
+        width: 47.5%;
+    }
+}
+
+@media screen and (max-width: 630px){
+
+    .content-in {
+        width: 400px;
+    }
+
+    .content-in > div {
+        width: 100%;
+    }
+    
+}
 
 /* continer end */
 
@@ -495,22 +494,26 @@ footer p{
     font-size: 14px;
 }
 
-@media screen and (max-width:1100px){
+@media screen and (max-width: 1200px) {
+
+    .content-subsol{
+        grid-template-columns: 200px 200px 200px 200px;
+    }
+    
+}
+
+
+@media screen and (max-width: 900px){
 
     .subsol {
-        background-image: url(image/footer-bg.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         width: 100%;
         padding: 20px;
         height: 850px;
         margin: auto;
-        align-items: center;
     }
 
     .content-subsol{
-    width: 70%;
+    width: 80%;
     background-color: transparent;
     display: block;
     flex-wrap: wrap;
@@ -535,4 +538,9 @@ footer p{
     }
 }
 
+@media screen and (max-width: 500px){
+    .content-subsol{
+        padding-left: 0;
+    }
+}
 /* subsol end */
